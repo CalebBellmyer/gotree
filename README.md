@@ -7,7 +7,8 @@ A tiny, dependency-free Go CLI that prints a text-based directory tree (similar 
 ## Install
 
 ```bash
-go install example.com/gotree/cmd/gotree@latest
+go install github.com/<your-username>/gotree/cmd/gotree@latest
+
 ```
 
 Or build locally:
