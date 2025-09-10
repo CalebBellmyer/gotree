@@ -1,4 +1,3 @@
-
 package main
 
 import (
@@ -50,7 +49,13 @@ func main() {
 
 	// Normalize root to clean path
 	root = filepath.Clean(root)
-	fmt.Println(filepath.Base(root))
+	absRoot, err := filepath.Abs(root)
+	if err != nil {
+    	absRoot = root // fallback
+	}
+	fmt.Println(filepath.Base(absRoot))
+
+
 	if err := walk(root, &o, 0, nil, ""); err != nil {
 		fmt.Fprintf(os.Stderr, "gotree: %v\n", err)
 		os.Exit(1)
@@ -140,4 +145,3 @@ func humanSize(n int64) string {
 	}
 	return fmt.Sprintf("%.1fPiB", d)
 }
-
