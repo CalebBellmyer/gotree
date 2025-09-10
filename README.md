@@ -1,5 +1,4 @@
---
-// README.md
+
 # gotree
 
 A tiny, dependency-free Go CLI that prints a text-based directory tree (similar to `tree`). By default it visualizes the current working directory. You can also pass a specific path.
